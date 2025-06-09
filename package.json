@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "lint": "eslint src",
     "prepare": "husky install"
   },
