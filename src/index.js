@@ -1,12 +1,14 @@
 import { app } from './app.js'
+import { initDatabase } from './db/init.js'
+import dotenv from 'dotenv'
 
-const PORT = 3000;
+dotenv.config();
 
-app.listen(PORT, (error) =>{
-    if(!error)
-        console.log("Server is Successfully Running, and App is listening on port "+ PORT);
-    else 
-        console.log("Error occurred, server can't start", error);
-    }
-);
-
+try {
+    await initDatabase()
+    const PORT = process.env.PORT
+    app.listen(PORT)
+    console.info(`express server running on http://localhost:${PORT}`)
+} catch (err) {
+    console.error('error connecting to database:', err)
+};
