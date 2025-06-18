@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export function PostSorting({ fields = [] }) {
     return (
       <div>
