@@ -18,6 +18,7 @@ app.use(helmet({
 
 app.use(bodyParser.json());
 postsRoutes(app);
+userRoutes(app);
 
 app.get('/', (req, res) => {
     res.send('Hello from Express!')
