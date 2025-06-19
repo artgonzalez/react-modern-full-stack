@@ -8,7 +8,7 @@ export function App() {
     <QueryClientProvider client={queryClient}>
       <Blog />
     </QueryClientProvider>
-  );
+  )
 };
 
 export default App;

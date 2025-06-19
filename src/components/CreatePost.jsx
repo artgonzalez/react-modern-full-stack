@@ -16,5 +16,5 @@ export function CreatePost() {
             <br />
             <input type='submit' value='Create' />
         </form>
-    );
+    )
 };

@@ -12,7 +12,7 @@ export function PostList({ posts = [] }) {
           </Fragment>
         ))}
       </div>
-    );
+    )
 };
   
 PostList.propTypes = {

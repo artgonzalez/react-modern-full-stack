@@ -10,7 +10,7 @@ export function PostFilter({ field }) {
           id={`filter-${field}`}
         />
       </div>
-    );
+    )
 };
 
 PostFilter.propTypes = {

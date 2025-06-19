@@ -18,7 +18,7 @@ export function PostSorting({ fields = [] }) {
           <option value={'descending'}>descending</option>
         </select>
       </div>
-    );
+    )
 };
 
 PostSorting.propTypes = {
