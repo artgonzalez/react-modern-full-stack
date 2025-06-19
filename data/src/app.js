@@ -10,7 +10,7 @@ app.use(helmet({
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: ["'self'", 'http://127.0.0.1:8000', 'ws://localhost:42877/']
+        connectSrc: ["'self'", 'http://127.0.0.1:8000', 'http://localhost:3000']
       }
     }
 }));

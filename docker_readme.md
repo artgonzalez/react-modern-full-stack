@@ -4,7 +4,7 @@ Create the image:
 
 sudo docker build -t blog-frontend .
 
-sudo docker run -it -p 2999:80 blog-frontend
+sudo docker run -it -p 3000:80 blog-frontend
 
-browser URL http://localhost:2999
+browser URL http://localhost:3000
 
