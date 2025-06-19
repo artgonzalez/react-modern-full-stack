@@ -2,6 +2,7 @@ import cors from 'cors'
 import express from 'express'
 import helmet from 'helmet'
 import { postsRoutes } from './routes/posts.js'
+import { userRoutes } from './routes/users.js'
 import bodyParser from 'body-parser'
 
 const app = express();

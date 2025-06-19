@@ -5,11 +5,8 @@ export async function createPost({ title, author, contents, tags }) {
     return await post.save();
 };
 
-async function listPosts(query = {},
-    { sortBy = 'createdAt', sortOrder = 'descending' } = {},
-    ) 
-    {
-        return await Post.find(query).sort({ [sortBy]: sortOrder })
+async function listPosts(query = {}, { sortBy = 'createdAt', sortOrder = 'descending' } = {},) {
+    return await Post.find(query).sort({ [sortBy]: sortOrder })
 };
 
 export async function listAllPosts(options) {
