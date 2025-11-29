@@ -24,7 +24,19 @@ export function userRoutes(app) {
     });
 
     app.get('/api/v1/users/:id', async (req, res) => {
-      const userInfo = await getUserInfoById(req.params.id)
-      return res.status(200).send(userInfo)
+      try {
+        const userInfo = await getUserInfoById(req.params.id)
+
+        if (!userInfo) {
+          throw new Error('User not found')
+        }
+        return res.status(200).json(userInfo)
+      } catch (err) {
+        console.error(err);
+
+        return res.status(500).json({
+          error: 'Internal server error'
+        })
+      }
     });
 };
