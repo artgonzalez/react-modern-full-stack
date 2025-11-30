@@ -15,9 +15,9 @@ export function userRoutes(app) {
     app.post('/api/v1/user/login', async (req, res) => {
       try {
         const token = await loginUser(req.body)
-        return res.status(200).send({ token })
+        return res.status(200).json({ token })
       } catch (err) {
-        return res.status(400).send({
+        return res.status(400).json({
           error: 'login failed, did you enter the correct username/password?'
         })
       }
